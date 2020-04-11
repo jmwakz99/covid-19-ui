@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <title>Estimator</title>
+  </head>
+  <body>
+    <main class="container mt-4 pt-4">
+      <form>
+        <div class="form-group">
+          <label for="population">Population</label>
+          <input
+            type="number"
+            class="form-control"
+            id="population"
+            data-population
+            min="0"
+            required
+          />
+          <small id="population" class="form-text text-muted"
+            >Please fill in the population size</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="timeToElapse">Time To Elapse</label>
+          <input
+            type="number"
+            class="form-control"
+            id="timeToElapse"
+            data-time-to-elapse
+            min="0"
+            required
+          />
+          <small id="timeToElapse" class="form-text text-muted"
+            >Please fill in the Time To Elapse</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="reportedCases">Reported Cases</label>
+          <input
+            type="number"
+            class="form-control"
+            id="reportedCases"
+            data-reported-cases
+            min="0"
+            required
+          />
+          <small id="reportedCases" class="form-text text-muted"
+            >Please fill in the Reported Cases</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="totalHospitalBeds">Total Hospital Beds</label>
+          <input
+            type="number"
+            class="form-control"
+            id="totalHospitalBeds"
+            data-total-hospital-beds
+            min="0"
+            required
+          />
+          <small id="totalHospitalBeds" class="form-text text-muted"
+            >Please fill in the Total number of hospital beds available</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="periodType">Period Type</label>
+          <div class="input-group mb-3">
+            <select
+              class="custom-select"
+              id="periodType"
+              data-period-type
+              required
+            >
+              <option value="days">days</option>
+              <option value="weeks">weeks</option>
+              <option value="months">months</option>
+            </select>
+            <div class="input-group-append">
+              <label class="input-group-text" for="inputGroupSelect02"
+                >Select From The list</label
+              >
+            </div>
+          </div>
+          <small id="periodType" class="form-text text-muted"
+            >Please fill in the Period Type</small
+          >
+        </div>
+
+        <button type="submit" class="btn btn-primary" data-go-estimate>
+          Submit
+        </button>
+      </form>
+    </main>
+  </body>
+</html>
